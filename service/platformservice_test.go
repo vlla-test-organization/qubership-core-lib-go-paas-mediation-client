@@ -22,7 +22,12 @@ func TestCreatePlatformService_Consul(t *testing.T) {
 
 	ctx, cancel := context.WithCancel(context.Background())
 	ts := createTestServer(func(w http.ResponseWriter, r *http.Request) {
-		if r.Method == "GET" && strings.HasPrefix(r.URL.Path, fmt.Sprintf("/v1/kv/"+bgStateMonitor.BgStateConsulPath, testNamespace)) &&
+		if r.Method == "GET" && strings.HasPrefix(r.URL.Path, fmt.Sprintf("/v1/kv/"+bgStateMonitor.BgStateConsulPathNew, testNamespace)) &&
+			r.URL.Query().Get("index") == "" {
+			w.Header().Add("X-Consul-Index", "1")
+			w.WriteHeader(http.StatusNotFound)
+			_, _ = w.Write(nil)
+		} else if r.Method == "GET" && strings.HasPrefix(r.URL.Path, fmt.Sprintf("/v1/kv/"+bgStateMonitor.BgStateConsulPath, testNamespace)) &&
 			r.URL.Query().Get("index") == "" {
 			w.Header().Add("X-Consul-Index", "1")
 			w.WriteHeader(http.StatusNotFound)
@@ -32,12 +37,12 @@ func TestCreatePlatformService_Consul(t *testing.T) {
 			// wait to imitate long polling request
 			select {
 			case <-ctx.Done():
-				w.Header().Add("X-Consul-Index", "1")
+				w.Header().Add("X-Consul-Index", "2")
 				w.WriteHeader(http.StatusNotFound)
 				_, _ = w.Write(nil)
 			}
 		} else {
-			panic("unexpected consul request")
+			panic("unexpected consul request, method: " + r.Method + ", url: " + r.URL.Path)
 		}
 	})
 	defer ts.Close()
@@ -73,6 +78,11 @@ func TestCreatePlatformService_Consul_Retries(t *testing.T) {
 				_, _ = w.Write(responseBody)
 			}
 			attempts--
+		} else if r.Method == "GET" && strings.HasPrefix(r.URL.Path, fmt.Sprintf("/v1/kv/"+bgStateMonitor.BgStateConsulPathNew, testNamespace)) &&
+			r.URL.Query().Get("index") == "" {
+			w.Header().Add("X-Consul-Index", "1")
+			w.WriteHeader(http.StatusNotFound)
+			_, _ = w.Write(nil)
 		} else if r.Method == "GET" && strings.HasPrefix(r.URL.Path, fmt.Sprintf("/v1/kv/"+bgStateMonitor.BgStateConsulPath, testNamespace)) &&
 			r.URL.Query().Get("index") == "" {
 			w.Header().Add("X-Consul-Index", "1")
@@ -88,7 +98,7 @@ func TestCreatePlatformService_Consul_Retries(t *testing.T) {
 				_, _ = w.Write(nil)
 			}
 		} else {
-			panic("unexpected consul request")
+			panic("unexpected consul request, method: " + r.Method + ", url: " + r.URL.Path)
 		}
 	})
 	defer ts.Close()

@@ -1,8 +1,6 @@
 module github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8
 
-go 1.23.0
-
-toolchain go1.23.1
+go 1.23.4
 
 require (
 	github.com/cert-manager/cert-manager v1.17.1
@@ -10,10 +8,10 @@ require (
 	github.com/fasthttp/websocket v1.5.12
 	github.com/golang/mock v1.6.0
 	github.com/knadh/koanf/providers/confmap v0.1.0
-	github.com/netcracker/qubership-core-lib-go-bg-state-monitor/v2 v2.0.0-20250324180319-160b98a83248
+	github.com/netcracker/qubership-core-lib-go-bg-state-monitor/v2 v2.0.0-20250327154816-a140c84c8d8b
 	github.com/netcracker/qubership-core-lib-go-rest-utils/v2 v2.0.0-20250324140029-6e57c35680eb
 	github.com/netcracker/qubership-core-lib-go/v3 v3.0.0-20250324061806-227fc2609b0a
-	github.com/openshift/api v0.0.0-20250325000651-62cf5e9e9bfe
+	github.com/openshift/api v0.0.0-20250325155304-0f14a211af33
 	github.com/openshift/client-go v0.0.0-20250324153519-f0faeb0f2f2e
 	github.com/smarty/assertions v1.16.0
 	github.com/stretchr/testify v1.10.0
@@ -58,7 +56,7 @@ require (
 	github.com/hashicorp/serf v0.10.1 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/klauspost/compress v1.17.11 // indirect
+	github.com/klauspost/compress v1.18.0 // indirect
 	github.com/knadh/koanf/maps v0.1.1 // indirect
 	github.com/knadh/koanf/parsers/yaml v0.1.0 // indirect
 	github.com/knadh/koanf/providers/env v1.0.0 // indirect
@@ -79,7 +77,7 @@ require (
 	github.com/savsgio/gotils v0.0.0-20240704082632-aef3928b8a38 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
-	github.com/valyala/fasthttp v1.58.0 // indirect
+	github.com/valyala/fasthttp v1.59.0 // indirect
 	github.com/viney-shih/go-lock v1.1.2 // indirect
 	github.com/x448/float16 v0.8.4 // indirect
 	golang.org/x/exp v0.0.0-20241217172543-b2144cdd0a67 // indirect

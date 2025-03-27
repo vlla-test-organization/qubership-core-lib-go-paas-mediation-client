@@ -18,6 +18,10 @@ type FakePods struct {
 	ns   string
 }
 
+func (f FakePods) UpdateResize(ctx context.Context, podName string, pod *v1.Pod, opts metav1.UpdateOptions) (*v1.Pod, error) {
+	panic("not implemented")
+}
+
 func (f FakePods) Create(ctx context.Context, pod *v1.Pod, opts metav1.CreateOptions) (*v1.Pod, error) {
 	panic("not implemented")
 }
