@@ -26,9 +26,20 @@ Golang implementation of paas agnostic access to the resources of Openshift/Kube
 #### Usage:
  
  Requirements:
- 1. create client with the code: service.NewPlatformClientBuilder()
- 2. Optionally turn on required cache
- 3. invoke Build() method
+ 1. Register security implemention - dummy or your own, the followning example shows registration of required services:
+```go
+import (
+	"github.com/netcracker/qubership-core-lib-go/v3/serviceloader"
+	"github.com/netcracker/qubership-core-lib-go/v3/security"
+)
+
+func init() {
+	serviceloader.Register(1, &security.DummyToken{})
+}
+```
+ 2. create client with the code: service.NewPlatformClientBuilder()
+ 3. Optionally turn on required cache
+ 4. invoke Build() method
  
 #### Create client with all type of caches enabled
 

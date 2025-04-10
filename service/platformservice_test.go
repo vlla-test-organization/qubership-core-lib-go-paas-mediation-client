@@ -14,8 +14,14 @@ import (
 	bgStateMonitor "github.com/netcracker/qubership-core-lib-go-bg-state-monitor/v2"
 	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/types"
 	"github.com/netcracker/qubership-core-lib-go/v3/configloader"
+	"github.com/netcracker/qubership-core-lib-go/v3/serviceloader"
+	"github.com/netcracker/qubership-core-lib-go/v3/security"
 	"github.com/stretchr/testify/require"
 )
+
+func init() {
+	serviceloader.Register(1, &security.DummyToken{})
+}
 
 func TestCreatePlatformService_Consul(t *testing.T) {
 	assertions := require.New(t)
