@@ -26,17 +26,17 @@ Golang implementation of paas agnostic access to the resources of Openshift/Kube
 #### Usage:
 
  Requirements:
- 1. Register security implemention - dummy or your own, the followning example shows registration of required services:
-```go
-import (
-	"github.com/netcracker/qubership-core-lib-go/v3/serviceloader"
-	"github.com/netcracker/qubership-core-lib-go/v3/security"
-)
+ 1. Register security implementation - dummy or your own, the following example shows registration of required services:
+    ```go
+    import (
+        "github.com/netcracker/qubership-core-lib-go/v3/serviceloader"
+        "github.com/netcracker/qubership-core-lib-go/v3/security"
+    )
 
-func init() {
-	serviceloader.Register(1, &security.DummyToken{})
-}
-```
+    func init() {
+        serviceloader.Register(1, &security.DummyToken{})
+    }
+    ```
  2. create client with the code: service.NewPlatformClientBuilder()
  3. Optionally turn on required cache
  4. invoke Build() method
@@ -98,24 +98,23 @@ Blue Green 2.0 requires Ingresses to be created with ingressClass 'bg.mesh.quber
 paas-mediation-client will detect BlueGreen mode automatically in the following cases:
 
 1. You created client providing manually consul enabled, consul url and consul token
-```
-	client, err := service.NewPlatformClientBuilder().
-		WithConsul(true, "http://consul:8500", "<consul-token>").
-		Build()
-```
+    ```
+    client, err := service.NewPlatformClientBuilder().
+        WithConsul(true, "http://consul:8500", "<consul-token>").
+        Build()
+    ```
 
 2. You created client providing manually consul enabled, consul url only assuming consul token will be acquired automatically via M2M token
-```
-	client, err := service.NewPlatformClientBuilder().
-		WithConsul(true, "http://consul:8500").
-		Build()
-```
+    ```
+    client, err := service.NewPlatformClientBuilder().
+        WithConsul(true, "http://consul:8500").
+        Build()
+    ```
 
 3. You created client assuming consul enabled, consul url and consul token params will be acquired automatically via envs or properties
 consul.enabled prop / CONSUL_ENABLED env
 consul.url prop / CONSUL_URL env
 consul.token prop / CONSUL_TOKEN env
-
-```
-	client, err := service.NewPlatformClientBuilder().Build()
-```
+    ```
+    client, err := service.NewPlatformClientBuilder().Build()
+    ```
