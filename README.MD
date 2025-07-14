@@ -8,11 +8,10 @@
 Golang implementation of paas agnostic access to the resources of Openshift/Kubernetes
 
 <!-- TOC -->
-* [paas-mediation-client](#paas-mediation-client)
-      * [Supported operations:](#supported-operations-)
+      * [Supported operations:](#supported-operations)
       * [Usage:](#usage)
       * [Create client with all type of caches enabled](#create-client-with-all-type-of-caches-enabled)
-      * [Create client with cache for Service и ConfigMap only](#create-client-with-cache-for-service-и-configmap-only)
+      * [Create client with cache for Service and ConfigMap only](#create-client-with-cache-for-service-and-configmap-only)
       * [Create client with custom rollout executor](#create-client-with-custom-rollout-executor)
         * [Custom rollout parallelism level](#custom-rollout-parallelism-level)
         * [Run rollout in parallel](#run-rollout-in-parallel)
@@ -20,12 +19,12 @@ Golang implementation of paas agnostic access to the resources of Openshift/Kube
       * [Blue Green detection mechanism for Ingress creation](#blue-green-detection-mechanism-for-ingress-creation)
 <!-- TOC -->
 
-#### Supported operations: 
+#### Supported operations:
 * CRUD operations on resources
 * Watch API on resources changes
 
 #### Usage:
- 
+
  Requirements:
  1. Register security implemention - dummy or your own, the followning example shows registration of required services:
 ```go
@@ -41,14 +40,14 @@ func init() {
  2. create client with the code: service.NewPlatformClientBuilder()
  3. Optionally turn on required cache
  4. invoke Build() method
- 
+
 #### Create client with all type of caches enabled
 
 ```
 service.NewPlatformClientBuilder().WithAllCaches().Build()
 ```
 
-#### Create client with cache for Service и ConfigMap only
+#### Create client with cache for Service and ConfigMap only
 
 ```
 service.NewPlatformClientBuilder().
@@ -60,7 +59,7 @@ service.NewPlatformClientBuilder().
 #### Create client with custom rollout executor
 
 The library allows rolling out deployments both sequentially and parallel. For parallel execution the library uses executor of fixed goroutines.
-This allows to control the max amount of simultaneous rollouts the library can perform at any given time. 
+This allows to control the max amount of simultaneous rollouts the library can perform at any given time.
 By default, the value is 32, but custom value can be specified during client creation.
 
 ##### Custom rollout parallelism level
@@ -77,7 +76,7 @@ service.NewPlatformClientBuilder().
 client, _ := service.NewPlatformClientBuilder().
 		WithAllCaches().
 		Build()
-		
+
 ctx := context.Background()
 var deploymentNames []string
 platformService.RolloutDeploymentsInParallel(ctx, namespace, deploymentNames)
@@ -88,7 +87,7 @@ platformService.RolloutDeploymentsInParallel(ctx, namespace, deploymentNames)
 client, _ := service.NewPlatformClientBuilder().
 		WithAllCaches().
 		Build()
-		
+
 ctx := context.Background()
 var deploymentNames []string
 platformService.RolloutDeployments(ctx, namespace, deploymentNames)
@@ -98,7 +97,7 @@ platformService.RolloutDeployments(ctx, namespace, deploymentNames)
 Blue Green 2.0 requires Ingresses to be created with ingressClass 'bg.mesh.qubership.org'
 paas-mediation-client will detect BlueGreen mode automatically in the following cases:
 
-1. You created client providing manually consul enabled, consul url and consul token 
+1. You created client providing manually consul enabled, consul url and consul token
 ```
 	client, err := service.NewPlatformClientBuilder().
 		WithConsul(true, "http://consul:8500", "<consul-token>").
