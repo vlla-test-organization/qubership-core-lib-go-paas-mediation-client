@@ -2,6 +2,10 @@ module github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-cl
 
 go 1.23.4
 
+retract (
+    v8.0.1
+)
+
 require (
 	github.com/cert-manager/cert-manager v1.17.1
 	github.com/dgraph-io/ristretto/v2 v2.1.0
