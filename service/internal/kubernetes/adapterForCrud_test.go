@@ -7,10 +7,10 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/entity"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/filter"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/service/internal/cache"
 	"github.com/stretchr/testify/require"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/entity"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/filter"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/service/internal/cache"
 	corev1 "k8s.io/api/core/v1"
 	k8sErrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

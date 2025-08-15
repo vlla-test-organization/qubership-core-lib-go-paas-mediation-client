@@ -3,8 +3,8 @@ package kubernetes
 import (
 	"context"
 
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/entity"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/filter"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/entity"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/filter"
 	appv1 "k8s.io/api/apps/v1"
 )
 

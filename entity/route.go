@@ -1,8 +1,8 @@
 package entity
 
 import (
-	"github.com/netcracker/qubership-core-lib-go/v3/logging"
 	v1 "github.com/openshift/api/route/v1"
+	"github.com/vlla-test-organization/qubership-core-lib-go/v3/logging"
 	"k8s.io/api/extensions/v1beta1"
 	networkingV1 "k8s.io/api/networking/v1"
 	"k8s.io/apimachinery/pkg/util/intstr"

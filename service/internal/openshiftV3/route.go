@@ -3,10 +3,10 @@ package openshiftV3
 import (
 	"context"
 
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/entity"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/filter"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/service/internal/kubernetes"
 	openshift_v1 "github.com/openshift/api/route/v1"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/entity"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/filter"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/service/internal/kubernetes"
 )
 
 func (os *OpenshiftV3Client) GetRoute(ctx context.Context, resourceName string, namespace string) (*entity.Route, error) {

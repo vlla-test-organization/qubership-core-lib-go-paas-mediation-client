@@ -1,7 +1,7 @@
 package entity
 
 import (
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/types"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/types"
 )
 
 // todo in next major release change to

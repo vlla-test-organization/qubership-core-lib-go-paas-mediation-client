@@ -4,8 +4,8 @@ import (
 	"context"
 
 	cmv1 "github.com/cert-manager/cert-manager/pkg/apis/certmanager/v1"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/entity"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/filter"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/entity"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/filter"
 )
 
 func (kube *Kubernetes) GetCertificate(ctx context.Context, resourceName string, namespace string) (*entity.Certificate, error) {

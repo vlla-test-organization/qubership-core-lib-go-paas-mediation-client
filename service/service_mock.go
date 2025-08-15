@@ -9,9 +9,9 @@ import (
 	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"
-	entity "github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/entity"
-	filter "github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/filter"
-	watch "github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/watch"
+	entity "github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/entity"
+	filter "github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/filter"
+	watch "github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/watch"
 )
 
 // MockRouteInterface is a mock of RouteInterface interface.

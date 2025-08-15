@@ -5,9 +5,9 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/entity"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/filter"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/service/internal/cache"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/entity"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/filter"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/service/internal/cache"
 	k8sErrors "k8s.io/apimachinery/pkg/api/errors"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/labels"

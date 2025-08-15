@@ -5,9 +5,9 @@ package service
 import (
 	"context"
 
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/entity"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/filter"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/watch"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/entity"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/filter"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/watch"
 )
 
 type RouteInterface interface {

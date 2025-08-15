@@ -3,12 +3,12 @@ package service
 import (
 	"time"
 
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/exec"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/service/backend"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/service/internal/cache"
-	kubernetes "github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/service/internal/kubernetes"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/types"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/watch"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/exec"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/service/backend"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/service/internal/cache"
+	kubernetes "github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/service/internal/kubernetes"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/types"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/watch"
 )
 
 type PlatformClientBuilder struct {

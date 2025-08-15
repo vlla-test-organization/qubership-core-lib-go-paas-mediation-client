@@ -3,10 +3,10 @@ package openshiftV3
 import (
 	"context"
 
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/entity"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/filter"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/service/internal/kubernetes"
 	openshiftappv1 "github.com/openshift/api/apps/v1"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/entity"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/filter"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/service/internal/kubernetes"
 )
 
 func (os *OpenshiftV3Client) GetDeployment(ctx context.Context, resourceName string, namespace string) (*entity.Deployment, error) {

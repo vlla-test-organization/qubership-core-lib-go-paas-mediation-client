@@ -3,8 +3,8 @@ package entity
 import (
 	"testing"
 
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/types"
 	"github.com/stretchr/testify/require"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/types"
 )
 
 func Test_NewDeploymentResponse(t *testing.T) {

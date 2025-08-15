@@ -8,8 +8,8 @@ import (
 	context "context"
 	reflect "reflect"
 
-	types "github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/types"
 	gomock "github.com/golang/mock/gomock"
+	types "github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/types"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	watch "k8s.io/apimachinery/pkg/watch"
 	rest "k8s.io/client-go/rest"

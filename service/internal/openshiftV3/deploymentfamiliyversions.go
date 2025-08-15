@@ -3,8 +3,8 @@ package openshiftV3
 import (
 	"context"
 
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/entity"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/filter"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/entity"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/filter"
 )
 
 func (os *OpenshiftV3Client) GetDeploymentFamilyVersions(ctx context.Context, familyName string, namespace string) ([]entity.DeploymentFamilyVersion, error) {

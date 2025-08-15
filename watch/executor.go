@@ -3,7 +3,7 @@ package watch
 import (
 	"context"
 
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/types"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/types"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/rest"

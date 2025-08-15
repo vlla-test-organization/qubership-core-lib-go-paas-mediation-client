@@ -9,10 +9,10 @@ import (
 
 	cmv1 "github.com/cert-manager/cert-manager/pkg/apis/certmanager/v1"
 	certClient "github.com/cert-manager/cert-manager/pkg/client/clientset/versioned"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/entity"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/service/internal/cache"
-	"github.com/netcracker/qubership-core-lib-go/v3/logging"
 	"github.com/stretchr/testify/require"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/entity"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/service/internal/cache"
+	"github.com/vlla-test-organization/qubership-core-lib-go/v3/logging"
 	v1 "k8s.io/api/core/v1"
 	networkingV1 "k8s.io/api/networking/v1"
 	"k8s.io/apimachinery/pkg/runtime"

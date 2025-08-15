@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/entity"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/filter"
-	pmWatch "github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/watch"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/entity"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/filter"
+	pmWatch "github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/watch"
 	"k8s.io/api/extensions/v1beta1"
 	networkingV1 "k8s.io/api/networking/v1"
 	paasErrors "k8s.io/apimachinery/pkg/api/errors"

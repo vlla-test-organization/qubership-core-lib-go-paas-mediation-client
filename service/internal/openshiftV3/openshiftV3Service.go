@@ -1,13 +1,13 @@
 package openshiftV3
 
 import (
-	kube "github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/service/internal/kubernetes"
-	"github.com/netcracker/qubership-core-lib-go/v3/logging"
 	projectv1 "github.com/openshift/api/project/v1"
 	appsv1client "github.com/openshift/client-go/apps/clientset/versioned/typed/apps/v1"
 	projectv1client "github.com/openshift/client-go/project/clientset/versioned/typed/project/v1"
 	routeScheme "github.com/openshift/client-go/route/clientset/versioned/scheme"
 	routev1client "github.com/openshift/client-go/route/clientset/versioned/typed/route/v1"
+	kube "github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/service/internal/kubernetes"
+	"github.com/vlla-test-organization/qubership-core-lib-go/v3/logging"
 	"k8s.io/client-go/kubernetes/scheme"
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"

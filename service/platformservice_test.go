@@ -9,11 +9,11 @@ import (
 	"testing"
 	"time"
 
-	bgStateMonitor "github.com/netcracker/qubership-core-lib-go-bg-state-monitor/v2"
-	"github.com/netcracker/qubership-core-lib-go-paas-mediation-client/v8/types"
-	"github.com/netcracker/qubership-core-lib-go/v3/security"
-	"github.com/netcracker/qubership-core-lib-go/v3/serviceloader"
 	"github.com/stretchr/testify/require"
+	bgStateMonitor "github.com/vlla-test-organization/qubership-core-lib-go-bg-state-monitor/v2"
+	"github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8/types"
+	"github.com/vlla-test-organization/qubership-core-lib-go/v3/security"
+	"github.com/vlla-test-organization/qubership-core-lib-go/v3/serviceloader"
 )
 
 func init() {
