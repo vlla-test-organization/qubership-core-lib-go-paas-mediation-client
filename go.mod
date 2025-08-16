@@ -2,22 +2,20 @@ module github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-cl
 
 go 1.23.4
 
-retract (
-    v8.0.1
-)
+retract v8.0.1
 
 require (
 	github.com/cert-manager/cert-manager v1.17.1
 	github.com/dgraph-io/ristretto/v2 v2.1.0
 	github.com/fasthttp/websocket v1.5.12
 	github.com/golang/mock v1.6.0
-	github.com/vlla-test-organization/qubership-core-lib-go-bg-state-monitor/v2 v2.0.3
-	github.com/vlla-test-organization/qubership-core-lib-go-rest-utils/v2 v2.0.3
-	github.com/vlla-test-organization/qubership-core-lib-go/v3 v3.0.3
 	github.com/openshift/api v0.0.0-20250325155304-0f14a211af33
 	github.com/openshift/client-go v0.0.0-20250324153519-f0faeb0f2f2e
 	github.com/smarty/assertions v1.16.0
 	github.com/stretchr/testify v1.10.0
+	github.com/vlla-test-organization/qubership-core-lib-go-bg-state-monitor/v2 v2.0.4
+	github.com/vlla-test-organization/qubership-core-lib-go-rest-utils/v2 v2.0.4
+	github.com/vlla-test-organization/qubership-core-lib-go/v3 v3.0.4
 	golang.org/x/mod v0.24.0
 	golang.org/x/net v0.37.0
 	k8s.io/api v0.32.3
