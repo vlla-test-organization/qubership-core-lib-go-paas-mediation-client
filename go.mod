@@ -11,9 +11,9 @@ require (
 	github.com/dgraph-io/ristretto/v2 v2.1.0
 	github.com/fasthttp/websocket v1.5.12
 	github.com/golang/mock v1.6.0
-	github.com/vlla-test-organization/qubership-core-lib-go-bg-state-monitor/v2 latest
-	github.com/vlla-test-organization/qubership-core-lib-go-rest-utils/v2 latest
-	github.com/vlla-test-organization/qubership-core-lib-go/v3 latest
+	github.com/vlla-test-organization/qubership-core-lib-go-bg-state-monitor/v2 v2.0.2
+	github.com/vlla-test-organization/qubership-core-lib-go-rest-utils/v2 v2.0.2
+	github.com/vlla-test-organization/qubership-core-lib-go/v3 v3.0.2
 	github.com/openshift/api v0.0.0-20250325155304-0f14a211af33
 	github.com/openshift/client-go v0.0.0-20250324153519-f0faeb0f2f2e
 	github.com/smarty/assertions v1.16.0
