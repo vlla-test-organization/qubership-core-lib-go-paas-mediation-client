@@ -13,9 +13,9 @@ require (
 	github.com/openshift/client-go v0.0.0-20250324153519-f0faeb0f2f2e
 	github.com/smarty/assertions v1.16.0
 	github.com/stretchr/testify v1.10.0
-	github.com/vlla-test-organization/qubership-core-lib-go-bg-state-monitor/v2 v2.0.5
-	github.com/vlla-test-organization/qubership-core-lib-go-rest-utils/v2 v2.0.5
-	github.com/vlla-test-organization/qubership-core-lib-go/v3 v3.0.5
+	github.com/vlla-test-organization/qubership-core-lib-go-bg-state-monitor/v2 v2.0.6
+	github.com/vlla-test-organization/qubership-core-lib-go-rest-utils/v2 v2.0.6
+	github.com/vlla-test-organization/qubership-core-lib-go/v3 v3.0.6
 	golang.org/x/mod v0.24.0
 	golang.org/x/net v0.37.0
 	k8s.io/api v0.32.3
