@@ -1,6 +1,6 @@
 module github.com/vlla-test-organization/qubership-core-lib-go-paas-mediation-client/v8
 
-go 1.23.4
+go 1.23
 
 
 require (
